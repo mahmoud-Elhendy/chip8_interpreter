@@ -53,3 +53,8 @@ The interpreter renders the CHIP-8 display (64x32 resolution) uisng SDL
 ## Sound
 
 A beep sound is generated when the sound timer is active. The implementation uses a portable method to play sound across platforms.
+
+
+## ROMS
+
+The ROMs added from : https://github.com/kripod/chip8-roms
