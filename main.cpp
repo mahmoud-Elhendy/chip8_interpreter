@@ -17,9 +17,11 @@ int main(int argc, char* argv[]){
     }
    
     Renderer renderer;
-    renderer.init_renderer();
+    if (!renderer.init_renderer())
+        return 1;
     Chip8 chip8;
-    chip8.loadROM(argv[1]);
+    if(!chip8.loadROM(argv[1]))
+        return 1;
 
     KeysHandler keyshandler(chip8.keypad);
     auto last_time = std::chrono::high_resolution_clock::now();
